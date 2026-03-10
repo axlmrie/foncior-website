@@ -14,6 +14,7 @@ Ce projet est développé en utilisant la T3 Stack, garantissant des performance
 
 # 🚀 Installation en local (À venir)
 Les instructions permettant de cloner ce dépôt et de lancer l'environnement de développement en local seront ajoutées dès que la structure de base du code sera déployée.
+
 # ⚖️ Droits et Licence
 © 2026 Foncior. Tous droits réservés.
 Ce dépôt est public à des fins de transparence et de présentation technique. Cependant, le code, le design, les textes et les assets graphiques présents ici sont la propriété exclusive de Foncior. Ils ne peuvent être copiés, reproduits, distribués ou modifiés sans une autorisation explicite préalable.
