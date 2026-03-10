@@ -1,20 +1,29 @@
-# 🏢 Foncior - Site Web
-Bienvenue sur le dépôt officiel du site de présentation de Foncior.
-# 📖 À propos de Foncior
-Foncior est une solution logicielle SaaS (ERP) nouvelle génération dédiée à la gestion locative. Notre mission est de simplifier, d'automatiser et de centraliser la gestion immobilière pour les professionnels et les particuliers.
-# 💻 À propos de ce dépôt
-Ce dépôt public contient uniquement le code source du site vitrine de Foncior. Son rôle est de présenter notre solution, détailler nos fonctionnalités et permettre la prise de contact.
-🔒 Note de sécurité : Le code source du cœur de l'application SaaS Foncior (l'ERP en lui-même) est strictement confidentiel et hébergé sur une infrastructure privée sécurisée.
-# 🛠️ Stack Technique (En cours d'initialisation)
-Ce projet est développé en utilisant la T3 Stack, garantissant des performances optimales et un code typé de bout en bout.
+# Create T3 App
 
-* Framework & Architecture : Next.js et TypeScript
-* Stylisation : Tailwind CSS
-* Outils T3 complémentaires (selon besoins) : tRPC, Prisma, NextAuth.js
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-# 🚀 Installation en local (À venir)
-Les instructions permettant de cloner ce dépôt et de lancer l'environnement de développement en local seront ajoutées dès que la structure de base du code sera déployée.
+## What's next? How do I make an app with this?
 
-# ⚖️ Droits et Licence
-© 2026 Foncior. Tous droits réservés.
-Ce dépôt est public à des fins de transparence et de présentation technique. Cependant, le code, le design, les textes et les assets graphiques présents ici sont la propriété exclusive de Foncior. Ils ne peuvent être copiés, reproduits, distribués ou modifiés sans une autorisation explicite préalable.
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+
+- [Next.js](https://nextjs.org)
+- [NextAuth.js](https://next-auth.js.org)
+- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
+- [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io)
+
+## Learn More
+
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+
+## How do I deploy this?
+
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
