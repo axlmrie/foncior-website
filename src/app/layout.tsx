@@ -5,6 +5,7 @@ import { Geist, Figtree } from "next/font/google";
 import { Nav } from "./_components/Nav";
 import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
+import { Footer } from "./_components/Footer";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body>
         <Nav/>
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Footer/>
       </body>
     </html>
   );
