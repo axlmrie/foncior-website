@@ -10,15 +10,17 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #F9FAFB;
   --foreground: oklch(0.145 0 0);
+  --light-text : #FFFFFF;
+  --dark-text : #000000;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #006D5B;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: #EEB856;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -79,6 +81,8 @@
 }
 
 @theme inline {
+  --color-light-text: var(--light-text);
+  --color-dark-text: var(--dark-text);
   --font-sans: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
