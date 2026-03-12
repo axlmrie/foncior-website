@@ -12,7 +12,7 @@ export default async function Home() {
       <main className="min-h-screen flex flex-col">
         <Header 
           title=" Foncior, la solution globale qui révolutionne votre quotidien de propriétaire."
-          subtitle="Gestionnaire de patrimoine immobilier."
+          subtitle={null}
           buttonText="Découvrez-nous"
           onButtonClick={() => {}}
         />

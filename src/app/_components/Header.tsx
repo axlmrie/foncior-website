@@ -8,7 +8,7 @@ interface HeaderProps {
 export function Header({ title, subtitle, buttonText, onButtonClick }: HeaderProps) {
     return (
         <header>
-            <div className="bg-primary pt-8 pb-11 md:[clip-path:ellipse(50%_100%_at_50%_0%)] flex flex-col items-center">
+            <div className="bg-primary md:px-100 pt-8 pb-11 md:[clip-path:ellipse(50%_100%_at_50%_0%)] flex flex-col items-center">
                 
                 <div className={`max-w-7xl h-50 mx-auto px-6 text-center flex flex-col items-center ${!buttonText || !subtitle  ? 'justify-center' : ''}`}>
                     
