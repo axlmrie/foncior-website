@@ -125,7 +125,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/axel/Documents/GitHub/foncior-website/generated/prisma",
+      "value": "/Users/c-auger/AMR-Prod/foncior-website/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -139,7 +139,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/axel/Documents/GitHub/foncior-website/prisma/schema.prisma",
+    "sourceFilePath": "/Users/c-auger/AMR-Prod/foncior-website/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -153,7 +153,6 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
