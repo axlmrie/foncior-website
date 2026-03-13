@@ -1,107 +1,46 @@
 import Link from "next/link";
-
 import { api, HydrateClient } from "@/trpc/server";
+import { Button } from '@/components/ui/button';
+import { Header } from "./_components/Header";
+import Image from "next/image";
 
 export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
 
-  void api.post.getLatest.prefetch();
 
   return (
     <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
-              </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
-              </div>
-            </Link>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
-              {hello ? hello.greeting : "Loading tRPC query..."}
-            </p>
-          </div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aut dignissimos culpa? Architecto, nam quia voluptas dignissimos eius eos voluptatem illo. Aut cupiditate numquam adipisci illo, veritatis corrupti? Corrupti, unde.
+      <main className="min-h-screen flex flex-col">
+        <Header 
+          title=" Foncior, la solution globale qui révolutionne votre quotidien de propriétaire."
+          subtitle={null}
+          buttonText="Découvrez-nous"
+          onButtonClick={() => {}}
+        />
 
+        <p className="text-center mx-auto my-10 md:w-200 text-sm px-4x  md:text-lg font-bold" >
+          Libérez-vous enfin de la charge mentale immobilière. Foncior est la solution ultime pour centraliser la finance et la gestion de tout votre patrimoine. Laissez notre cockpit interactif travailler pour vous
+        </p>
+
+        <h2 className="text-center px-4x my-5 text-primary  md:text-2xl">Pourquoi choisir notre solution pour votre gestion locative ?</h2>
+
+        <div className="md:flex md:items-center md:justify-evenly md:my-10 md:gap-12">
+          <Image
+            width={300}
+            height={484}
+            src="/ComputerLocation.png"
+            alt="Illustration"
+            className="mx-auto my-10 md:my-0 md:mx-0"
+          />
+
+          <div>
+            <ul className="list-disc mx-10 mb-20 md:w-100 md:m-0">
+              <li className="py-2"><strong className="text-primary"><h3 className="text-xl">Suivi sur-mesure :</h3></strong> <p>Maîtrisez le budget de chaque bien en temps réel.</p></li>
+              <li className="py-2"><strong className="text-primary"><h3 className="text-xl">Gestion simplifiée :</h3></strong> <p>Organisez chaque location (Airbnb, longue durée...) et fluidifiez les échanges avec vos locataires.</p></li>
+              <li className="py-2"><strong className="text-primary"><h3 className="text-xl">Visibilité totale :</h3></strong> <p>Centralisez vos biens grâce à notre planning intégré. Reprenez le contrôle de vos investissements dès aujourd'hui !</p></li>
+            </ul>
+          </div>
         </div>
+
       </main>
     </HydrateClient>
   );
