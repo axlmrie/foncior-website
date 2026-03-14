@@ -14,9 +14,9 @@ export default async function Home() {
           title=" Foncior, la solution globale qui révolutionne votre quotidien de propriétaire."
           subtitle={null}
           buttonText="Découvrez-nous"
-          onButtonClick={() => {}}
+          onButtonClick={() => {console.log("contact")}}
         />
-
+        
         <p className="text-center mx-auto my-10 md:w-200 text-sm px-4x  md:text-lg font-bold" >
           Libérez-vous enfin de la charge mentale immobilière. Foncior est la solution ultime pour centraliser la finance et la gestion de tout votre patrimoine. Laissez notre cockpit interactif travailler pour vous
         </p>
@@ -34,9 +34,20 @@ export default async function Home() {
 
           <div>
             <ul className="list-disc mx-10 mb-20 md:w-100 md:m-0">
-              <li className="py-2"><strong className="text-primary"><h3 className="text-xl">Suivi sur-mesure :</h3></strong> <p>Maîtrisez le budget de chaque bien en temps réel.</p></li>
-              <li className="py-2"><strong className="text-primary"><h3 className="text-xl">Gestion simplifiée :</h3></strong> <p>Organisez chaque location (Airbnb, longue durée...) et fluidifiez les échanges avec vos locataires.</p></li>
-              <li className="py-2"><strong className="text-primary"><h3 className="text-xl">Visibilité totale :</h3></strong> <p>Centralisez vos biens grâce à notre planning intégré. Reprenez le contrôle de vos investissements dès aujourd'hui !</p></li>
+              <li className="py-2">
+                <h3 className="text-xl text-primary font-bold inline">Suivi sur-mesure : </h3> 
+                <p className="inline">Maîtrisez le budget de chaque bien en temps réel.</p>
+              </li>
+
+              <li className="py-2">
+                <h3 className="text-xl text-primary font-bold inline">Gestion simplifiée : </h3> 
+                <p className="inline">Organisez chaque location (Airbnb, longue durée...) et fluidifiez les échanges avec vos locataires.</p>
+              </li>
+
+              <li className="py-2">
+                <h3 className="text-xl text-primary font-bold inline">Visibilité totale : </h3> 
+                <p className="inline">Centralisez vos biens grâce à notre planning intégré. Reprenez le contrôle de vos investissements dès aujourd&apos;hui !</p>
+              </li>
             </ul>
           </div>
         </div>

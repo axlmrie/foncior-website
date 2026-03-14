@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
               1. Identité du responsable de traitement
             </h2>
             <p>
-              Le responsable du traitement des données collectées sur le site Foncior est <strong>Axel Marie</strong>. Pour toute question relative à la protection de vos données, vous pouvez nous contacter à l'adresse suivante : <strong>contact@foncior.fr</strong>.
+              Le responsable du traitement des données collectées sur le site Foncior est <strong>Axel Marie</strong>. Pour toute question relative à la protection de vos données, vous pouvez nous contacter à l&apos;adresse suivante : <strong>contact@foncior.fr</strong>.
             </p>
           </section>
 
@@ -39,10 +39,10 @@ export default function PrivacyPolicyPage() {
               </div>
 
               <div>
-                <h3 className="font-medium text-gray-900">B. Inscription à la liste d'attente (Bêta-test)</h3>
+                <h3 className="font-medium text-gray-900">B. Inscription à la liste d&apos;attente (Bêta-test)</h3>
                 <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600">
                   <li><strong>Données collectées :</strong> Nom, Prénom, Adresse e-mail.</li>
-                  <li><strong>Finalité :</strong> Ces données sont récoltées avec votre consentement explicite lors de la soumission du formulaire. Elles servent exclusivement à vous recontacter pour vous informer de l'ouverture de notre bêta-test.</li>
+                  <li><strong>Finalité :</strong> Ces données sont récoltées avec votre consentement explicite lors de la soumission du formulaire. Elles servent exclusivement à vous recontacter pour vous informer de l&apos;ouverture de notre bêta-test.</li>
                 </ul>
               </div>
 
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
                 <h3 className="font-medium text-gray-900">C. Statistiques de fréquentation</h3>
                 <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600">
                   <li><strong>Données collectées :</strong> Données de navigation anonymisées (via des cookies de type Google Analytics).</li>
-                  <li><strong>Finalité :</strong> Mesurer l'audience de notre site vitrine et comprendre comment les utilisateurs interagissent avec celui-ci afin de l'améliorer continuellement.</li>
+                  <li><strong>Finalité :</strong> Mesurer l&apos;audience de notre site vitrine et comprendre comment les utilisateurs interagissent avec celui-ci afin de l&apos;améliorer continuellement.</li>
                 </ul>
               </div>
             </div>
@@ -61,10 +61,10 @@ export default function PrivacyPolicyPage() {
               3. Où sont stockées vos données et pour combien de temps ?
             </h2>
             <p className="mb-2">
-              Les données liées à l'inscription à notre bêta-test sont stockées de manière sécurisée sur des serveurs situés en <strong>France</strong>, hébergés par <strong>Vercel </strong>.
+              Les données liées à l&apos;inscription à notre bêta-test sont stockées de manière sécurisée sur des serveurs situés en <strong>France</strong>, hébergés par <strong>Vercel </strong>.
             </p>
             <p>
-              Vos données de contact et d'inscription à la bêta sont conservées pendant une durée maximale de 3 ans à compter de notre dernier contact, ou jusqu'à ce que vous demandiez leur suppression.
+              Vos données de contact et d&apos;inscription à la bêta sont conservées pendant une durée maximale de 3 ans à compter de notre dernier contact, ou jusqu&apos;à ce que vous demandiez leur suppression.
             </p>
           </section>
 
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
               4. Partage des données
             </h2>
             <p>
-              Nous ne vendons, ne louons, ni ne partageons vos données personnelles à des tiers à des fins commerciales. Les seules données partagées sont les données de navigation anonymisées transmises à notre outil d'analyse (Google Analytics) pour nos statistiques internes.
+              Nous ne vendons, ne louons, ni ne partageons vos données personnelles à des tiers à des fins commerciales. Les seules données partagées sont les données de navigation anonymisées transmises à notre outil d&apos;analyse (Google Analytics) pour nos statistiques internes.
             </p>
           </section>
 
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
               5. Vos droits
             </h2>
             <p className="mb-4">
-              Conformément à la réglementation européenne (RGPD), vous disposez d'un droit d'accès, de rectification, de portabilité et de suppression de vos données.
+              Conformément à la réglementation européenne (RGPD), vous disposez d&apos;un droit d&apos;accès, de rectification, de portabilité et de suppression de vos données.
             </p>
             <p>
               Pour exercer ces droits, il vous suffit de nous envoyer un e-mail à : <strong>contact@foncior.fr</strong>. Nous traiterons votre demande dans les plus brefs délais.
@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
             href="/" 
             className="inline-block px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors"
           >
-            Retour à l'accueil
+            Retour à l&apos;accueil
           </Link>
         </div>
 
