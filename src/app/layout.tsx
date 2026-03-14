@@ -7,6 +7,7 @@ import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
 import { Footer } from "./_components/Footer";
 import { CookieBanner } from "./_components/CookieBanner";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -25,7 +26,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={cn(geist.variable, "font-sans", figtree.variable)}>
+    <html lang="fr" className={cn(geist.variable, "font-sans", figtree.variable)}>
+      <GoogleTagManager gtmId="GTM-PT5JGZ7N" />
       <body>
         <Nav/>
         <CookieBanner/>
