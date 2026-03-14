@@ -34,7 +34,7 @@ export function CookieBanner() {
       <div>
         <h3 className="text-lg font-bold text-[#1b5346] mb-2">Respect de votre vie privée</h3>
         <p className="text-sm text-gray-600 leading-relaxed">
-          Nous utilisons des cookies (Google Analytics) uniquement pour mesurer l'audience de notre site et l'améliorer. Aucune donnée n'est revendue.
+          Nous utilisons des cookies (Google Analytics) uniquement pour mesurer l&apos;audience de notre site et l&apos;améliorer. Aucune donnée n&apos;est revendue.
         </p>
       </div>
       
