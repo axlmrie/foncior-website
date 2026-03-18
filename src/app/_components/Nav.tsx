@@ -53,7 +53,9 @@ export function Nav() {
 
         <div className="hidden md:block shrink-0">
           <Button className="bg-primary cursor-pointer hover:bg-[#123a31] text-white px-6 py-5 rounded-md text-base font-semibold">
-            Rejoindre la Beta
+            <Link href="/beta">
+              Rejoindre la Beta
+            </Link>
           </Button>
         </div>
 
@@ -80,7 +82,9 @@ export function Nav() {
           ))}
           
           <Button onClick={toggleMenu} className="bg-primary hover:bg-[#123a31] cursor-pointer text-white px-6 py-5 rounded-md text-base font-semibold w-3/4 max-w-sm mt-4">
-            Rejoindre la Beta
+            <Link href="/beta">
+              Rejoindre la Beta
+            </Link>
           </Button>
         </div>
       )}

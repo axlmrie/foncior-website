@@ -1,5 +1,6 @@
 "use client";
 
+import { toast } from "sonner";
 import { Header } from "../_components/Header";
 import { sendEmailAction } from "../actions/sendEmailAction";
 import { useActionState } from "react";
@@ -74,16 +75,16 @@ const [state, formAction, isPending] = useActionState(sendEmailAction, {});
                     {isPending ? "Envoi..." : "Envoyer"}
                 </button>
 
-                {state?.success && (
-                    <p className="text-green-600 text-sm text-center sm:text-right mt-2">
-                        {state.message}
-                    </p>
+                              {state?.success && (
+                  toast.success(state.success, {
+                      description: state.message,
+                  })
                 )}
-                {state?.error && (
-                    <p className="text-red-600 text-sm text-center sm:text-right mt-2">
-                        {state.error}
-                    </p>
-                )}
+              {state?.error && (
+                  toast.error(state.error, {
+                      description: state.error,
+                  })
+              )}
             </form>
 
                 </div>

@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { Footer } from "./_components/Footer";
 import { CookieBanner } from "./_components/CookieBanner";
 import { GoogleTagManager } from '@next/third-parties/google';
+import { Toaster } from "sonner";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -26,14 +27,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={cn(geist.variable, "font-sans", figtree.variable)}>
+    <html lang="fr" suppressHydrationWarning className={cn(geist.variable, "font-sans", figtree.variable)}>
       <GoogleTagManager gtmId="GTM-PT5JGZ7N" />
       <body>
         <Nav/>
         <CookieBanner/>
         <TRPCReactProvider>{children}</TRPCReactProvider>
-        <Footer/>
+        <Footer />
       </body>
+      <Toaster richColors />
     </html>
   );
 }
