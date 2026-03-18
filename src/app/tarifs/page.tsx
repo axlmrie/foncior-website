@@ -34,7 +34,7 @@ export default function Tarifs() {
         <Header
             title="Nos Tarifs"
             subtitle="Découvrez nos offres adaptées à vos besoins, que vous soyez un particulier ou une entreprise."
-            onButtonClick={() => {}}
+            onButtonClick={() => {console.log("redirect")}}
             buttonText={null}
         />
       <div id="test" className="hidden md:mt-20 md:flex justify-center items-center gap-6">
