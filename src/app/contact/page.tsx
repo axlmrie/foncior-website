@@ -10,7 +10,7 @@ export default function Contact() {
             <Header
                 title="Contactez-nous"
                 subtitle="Une question, une suggestion ou besoin d'aide ? Notre équipe est là pour vous aider."
-                onButtonClick={() => {}}
+                onButtonClick={() => {console.log("redirection")}}
                 buttonText={null}
             />
 

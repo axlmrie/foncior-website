@@ -1,5 +1,12 @@
+ export interface PricingPlan {
+  id: number;
+  name: string;
+  price: string | null;
+  features: string[];
+  isPopular?: boolean;
+}
 
-export  function PricingCard({ plan }: { plan: any }) {
+export  function PricingCard({ plan }: { plan: PricingPlan }) {
   return (
     <div className={`relative p-6 h-[60vh]  border rounded-2xl shadow-sm flex flex-col w-full max-w-sm ${plan.isPopular ? 'border-secondary shadow-md ring-1 ring-secondary scale-105 bg-primary text-light-text' : 'border-gray-200 bg-white'}`}>
       {plan.isPopular && (
