@@ -4,7 +4,7 @@ import { Header } from "../_components/Header";
 import { sendEmailAction } from "../actions/sendEmailAction";
 import { useActionState } from "react";
 export default function Contact() {
-    const [state, formAction, isPending] = useActionState(sendEmailAction, null);
+const [state, formAction, isPending] = useActionState(sendEmailAction, {});
     return (
         <div className="pb-16">
             <Header
