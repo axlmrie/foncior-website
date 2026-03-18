@@ -11,15 +11,15 @@ export interface EmailFormState {
 }
 
 export async function sendEmailAction(
-    prevState: EmailFormState, 
+    prevState: EmailFormState | null, 
     formData: FormData
 ): Promise<EmailFormState> {
     
-    const nom = formData.get('nom')?.toString() || '';
-    const prenom = formData.get('prenom')?.toString() || '';
-    const email = formData.get('email')?.toString() || '';
-    const message = formData.get('message')?.toString() || '';
-    const to = formData.get('to')?.toString() || '';
+    const nom = (formData.get('nom') as string) ?? '';
+    const prenom = (formData.get('prenom') as string) ?? '';
+    const email = (formData.get('email') as string) ?? '';
+    const message = (formData.get('message') as string) ?? '';
+    const to = (formData.get('to') as string) ?? '';
 
     try {
         await resend.emails.send({
