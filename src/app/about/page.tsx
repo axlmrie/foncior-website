@@ -6,7 +6,7 @@ export default function About(){
         <div >
             <Header 
                 title="A Propos"
-                subtitle={null}
+                subtitle="Qui sommes-nous ? Découvrez notre entreprise, nos valeurs et nos talents."
                 buttonText={null}
                 onButtonClick={() => {console.log("contact")}}
             />

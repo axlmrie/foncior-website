@@ -4,8 +4,8 @@ export default function Solution(){
     return (
         <div>
             <Header 
-                title="Avec Foncior, reprenez le contrôle de votre patrimoine en toute simplicité."
-                subtitle={null}
+                title="Notre solution"
+                subtitle="Avec Foncior, reprenez le contrôle de votre patrimoine en toute simplicité."
                 buttonText={null}
                 onButtonClick={() => {console.log("contact")}}
             />

@@ -125,7 +125,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\blavo\\Documents\\Foncior\\foncior-website\\generated\\prisma",
+      "value": "/Users/c-auger/AMR-Prod/foncior-website/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -134,12 +134,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "darwin-arm64",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\blavo\\Documents\\Foncior\\foncior-website\\prisma\\schema.prisma",
+    "sourceFilePath": "/Users/c-auger/AMR-Prod/foncior-website/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -153,7 +153,6 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
