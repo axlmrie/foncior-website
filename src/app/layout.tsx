@@ -7,7 +7,6 @@ import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
 import { Footer } from "./_components/Footer";
 import { CookieBanner } from "./_components/CookieBanner";
-import { GoogleTagManager } from '@next/third-parties/google';
 import { Toaster } from "sonner";
 import Script from "next/script";
 
@@ -29,7 +28,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" suppressHydrationWarning className={cn(geist.variable, "font-sans", figtree.variable)}>
-      <GoogleTagManager gtmId="G-Z88QVP531B" />
       <body>
         <Nav/>
         <CookieBanner/>
