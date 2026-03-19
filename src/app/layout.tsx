@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" suppressHydrationWarning className={cn(geist.variable, "font-sans", figtree.variable)}>
-      <GoogleTagManager gtmId="GTM-PT5JGZ7N" />
+      <GoogleTagManager gtmId="G-Z88QVP531B" />
       <body>
         <Nav/>
         <CookieBanner/>
