@@ -5,10 +5,9 @@ interface HeaderProps {
     subtitle: string | null;
     buttonText: string | null;
     buttonLink?: string | null;
-    onButtonClick: () => void;
 }
 
-export function Header({ title, subtitle, buttonText, buttonLink, onButtonClick }: HeaderProps) {
+export function Header({ title, subtitle, buttonText, buttonLink}: HeaderProps) {
   return (
     <header>
       <div className="bg-primary md:px-100 pt-8 pb-11 md:[clip-path:ellipse(50%_100%_at_50%_0%)] flex flex-col items-center">
@@ -33,7 +32,7 @@ export function Header({ title, subtitle, buttonText, buttonLink, onButtonClick 
                 </Link>
               ) : (
                 <button 
-                  onClick={onButtonClick}
+                  
                   className="px-8 py-3 bg-[#EBA844] hover:bg-[#d49f4c] cursor-pointer text-light-text font-bold rounded-lg text-lg transition-colors"
                 >
                   {buttonText}

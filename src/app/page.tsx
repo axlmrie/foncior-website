@@ -12,9 +12,6 @@ export default async function Home() {
           title=" Foncior, la solution globale qui révolutionne votre quotidien de propriétaire."
           subtitle={null}
           buttonText="Découvrez-nous"
-          onButtonClick={() => {
-            console.log("contact");
-          }}
           buttonLink="/about"
         />
 
@@ -73,7 +70,7 @@ export default async function Home() {
         </div>
         <div className="flex justify-center p-8 md:items-center md:gap-12">
           <Link href="/solution">
-            <Button variant="default" size="lg" className="mt-0">
+            <Button variant="default" size="lg" className="mt-0 w-60 text-xl">
               Découvrir notre solution
             </Button>
           </Link>
