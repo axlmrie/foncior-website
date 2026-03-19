@@ -10,7 +10,7 @@ export default function Beta() {
     useEffect(() => {
         if (state?.success) {
             toast.success(state.success, {
-                description: state.message,
+                description: "Inscription réaliser avec succée",
             });
         } else if (state?.error) {
             toast.error("Erreur", {
@@ -32,7 +32,7 @@ export default function Beta() {
                 <input type="checkbox" name="consent" required className="mr-2" />
                 <p className="text-white">j’accepte que les informations saisies soient utilisées dans le cadre de ma demande et de la relation commerciale qui peut en découler.</p>
               </div>
-              <input type="email" name="to" value="contact@foncior.com" className="hidden"  />
+              <input type="email" name="to" defaultValue="beta@foncior.com" className="hidden"  />
               <button
                   type="submit"
                   disabled={isPending}

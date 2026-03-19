@@ -34,8 +34,8 @@ export default function RootLayout({
         <CookieBanner/>
         <TRPCReactProvider>{children}</TRPCReactProvider>
         <Footer />
+        <Toaster richColors />
       </body>
-      <Toaster richColors />
     </html>
   );
 }

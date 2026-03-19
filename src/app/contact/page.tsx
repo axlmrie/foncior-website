@@ -70,7 +70,7 @@ export default function Contact() {
                             placeholder="Email" 
                             required
                         />
-                        <input type="email" name="to" value="contact@foncior.com" className="hidden"  />
+                        <input type="email" name="to" defaultValue="contact@foncior.com" className="hidden"  />
                         
                         <textarea 
                             name="message"

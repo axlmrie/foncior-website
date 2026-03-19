@@ -126,7 +126,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/tymacz/Porjet_Info/foncior-website/foncior-website/generated/prisma",
+      "value": "/Users/axel/Documents/GitHub/foncior-website/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -140,7 +140,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/tymacz/Porjet_Info/foncior-website/foncior-website/prisma/schema.prisma",
+    "sourceFilePath": "/Users/axel/Documents/GitHub/foncior-website/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
