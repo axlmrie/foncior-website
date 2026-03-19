@@ -9,6 +9,7 @@ import { Footer } from "./_components/Footer";
 import { CookieBanner } from "./_components/CookieBanner";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -35,6 +36,19 @@ export default function RootLayout({
         <TRPCReactProvider>{children}</TRPCReactProvider>
         <Footer />
         <Toaster richColors />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z88QVP531B"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Z88QVP531B');
+          `}
+        </Script>
       </body>
     </html>
   );
