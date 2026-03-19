@@ -3,9 +3,21 @@
 import { toast } from "sonner";
 import { Header } from "../_components/Header";
 import { sendEmailAction } from "../actions/sendEmailAction";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 export default function Contact() {
-const [state, formAction, isPending] = useActionState(sendEmailAction, {});
+    const [state, formAction, isPending] = useActionState(sendEmailAction, {});
+    
+    useEffect(() => {
+            if (state?.success) {
+                toast.success(state.success, {
+                    description: state.message,
+                });
+            } else if (state?.error) {
+                toast.error("Erreur", {
+                    description: state.error,
+                });
+            }
+        }, [state]);
     return (
         <div className="pb-16">
             <Header
@@ -74,17 +86,6 @@ const [state, formAction, isPending] = useActionState(sendEmailAction, {});
                 >
                     {isPending ? "Envoi..." : "Envoyer"}
                 </button>
-
-                              {state?.success && (
-                  toast.success(state.success, {
-                      description: state.message,
-                  })
-                )}
-              {state?.error && (
-                  toast.error(state.error, {
-                      description: state.error,
-                  })
-              )}
             </form>
 
                 </div>
