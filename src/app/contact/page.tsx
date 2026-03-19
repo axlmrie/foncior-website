@@ -1,10 +1,23 @@
 "use client";
 
+import { toast } from "sonner";
 import { Header } from "../_components/Header";
 import { sendEmailAction } from "../actions/sendEmailAction";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 export default function Contact() {
-const [state, formAction, isPending] = useActionState(sendEmailAction, {});
+    const [state, formAction, isPending] = useActionState(sendEmailAction, {});
+    
+    useEffect(() => {
+            if (state?.success) {
+                toast.success(state.success, {
+                    description: state.message,
+                });
+            } else if (state?.error) {
+                toast.error("Erreur", {
+                    description: state.error,
+                });
+            }
+        }, [state]);
     return (
         <div className="pb-16">
             <Header
@@ -57,7 +70,7 @@ const [state, formAction, isPending] = useActionState(sendEmailAction, {});
                             placeholder="Email" 
                             required
                         />
-                        <input type="email" name="to" value="contact@foncior.com" className="hidden"  />
+                        <input type="email" name="to" defaultValue="contact@foncior.com" className="hidden"  />
                         
                         <textarea 
                             name="message"
@@ -73,17 +86,6 @@ const [state, formAction, isPending] = useActionState(sendEmailAction, {});
                 >
                     {isPending ? "Envoi..." : "Envoyer"}
                 </button>
-
-                {state?.success && (
-                    <p className="text-green-600 text-sm text-center sm:text-right mt-2">
-                        {state.message}
-                    </p>
-                )}
-                {state?.error && (
-                    <p className="text-red-600 text-sm text-center sm:text-right mt-2">
-                        {state.error}
-                    </p>
-                )}
             </form>
 
                 </div>
