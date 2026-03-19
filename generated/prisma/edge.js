@@ -125,7 +125,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/c-auger/AMR-Prod/foncior-website/generated/prisma",
+      "value": "C:\\Users\\blavo\\Documents\\Foncior\\foncior-website\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -134,17 +134,16 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "darwin-arm64",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/c-auger/AMR-Prod/foncior-website/prisma/schema.prisma",
+    "sourceFilePath": "C:\\Users\\blavo\\Documents\\Foncior\\foncior-website\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "6.19.2",
