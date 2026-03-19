@@ -68,7 +68,7 @@ export default function Solution() {
             />
             <p className="mx-auto mt-8 w-70 md:mt-0 md:w-150">
               Analysez votre rentabilité, bien par bien. Avec la solution
-              Foncior, gardez une maîtrise totale de votre financeimmobilière.
+              Foncior, gardez une maîtrise totale de votre finance immobilière.
               Visualisez instantanément l&apos;impact de chaque location sur
               votre budget global. Comparez vos coûts d&apos;exploitation au
               rendement réel de vos investissements pour prendre les meilleures
