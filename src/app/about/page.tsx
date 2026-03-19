@@ -84,7 +84,7 @@ export default function About() {
         </div>
 
         <div>
-          <h1 className="text-primary my-5 px-8 text-4xl md:mt-16 md:px-0">
+          <h1 className="text-center text-primary my-5 px-8 text-4xl md:mt-16 md:px-0">
             L&apos;équipe
           </h1>
 
@@ -173,7 +173,7 @@ export default function About() {
               <div className="clear-both md:hidden"></div>
             </div>
           </div>
-          <div className="flex justify-center p-8 md:items-center md:gap-12">
+          <div className="flex justify-center p-8 md:items-center md:gap-12 mb-12 mt-20 mx-auto shrink-0">
             <Link href="/solution">
               <Button variant="default" size="lg" className="mt-0 w-60 text-xl">
                 Découvrir notre solution

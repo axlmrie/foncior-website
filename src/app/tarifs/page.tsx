@@ -144,17 +144,13 @@ export default function Tarifs() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center p-8 md:items-center md:gap-12">
-        <Link href="/solution">
-          <Button
-            variant="default"
-            size="lg"
-            className="mt-10 w-60 text-xl"
-          >
-            Découvrir notre solution
-          </Button>
-        </Link>
-      </div>
+      <div className="flex justify-center p-8 md:items-center md:gap-12 mb-12 mt-20 mx-auto shrink-0">
+            <Link href="/solution">
+              <Button variant="default" size="lg" className="mt-0 w-60 text-xl">
+                Découvrir notre solution
+              </Button>
+            </Link>
+          </div>
     </div>
   );
 }
