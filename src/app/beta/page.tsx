@@ -21,7 +21,8 @@ export default function Beta() {
   return (
       <div className="w-full h-full pb-12 bg-[url('/bg-beta.png')] bg-cover bg-center">
           <p className="w-1/2 mx-auto text-center text-2xl font-bold text-white pt-24">
-              Application en construction, inscrivez-vous pour être informer de la sortie de l’application. Cette inscription vous octroie un droit d’accès à la version bêta de la solution.
+              Application en construction, inscrivez-vous pour être informer de la sortie de l’application.</p>
+          <p className="w-1/2 mx-auto text-center text-2xl font-bold text-white pt-4">Cette inscription vous octroie un droit d’accès à la version bêta de la solution.
           </p>
           <Image src={"/FonciorBlancOr.png"} alt={"Logo de Foncior"} width={300} height={300} className="mx-auto mt-12" />
           <form action={formAction} className="w-full max-w-sm mx-auto my-12">

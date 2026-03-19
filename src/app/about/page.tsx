@@ -80,11 +80,11 @@ export default function About() {
             standard de l&apos;industrie pour les investisseurs indépendants.”
           </p>
           <br />
-          <p className="italic">Axel Marie Chef du projet</p>
+          <p className="italic">Axel Marie, Chef du projet</p>
         </div>
 
         <div>
-          <h1 className="text-primary my-5 px-8 text-4xl md:mt-16 md:px-0">
+          <h1 className="text-center text-primary my-5 px-8 text-4xl md:mt-16 md:px-0">
             L&apos;équipe
           </h1>
 
@@ -118,7 +118,7 @@ export default function About() {
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
             <h2 className="text-primary py-5 text-center text-xl font-bold">
-              Maxence REBOURS - Responsable technique
+              Maxence Rebours - Responsable technique
             </h2>
 
             <div className="px-4 pt-10 md:flex md:flex-row-reverse md:items-center md:justify-center md:gap-10">
@@ -173,7 +173,7 @@ export default function About() {
               <div className="clear-both md:hidden"></div>
             </div>
           </div>
-          <div className="flex justify-center p-8 md:items-center md:gap-12">
+          <div className="flex justify-center p-8 md:items-center md:gap-12 mb-12 mt-20 mx-auto shrink-0">
             <Link href="/solution">
               <Button variant="default" size="lg" className="mt-0 w-60 text-xl">
                 Découvrir notre solution

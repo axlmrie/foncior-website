@@ -20,7 +20,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
           Le plus choisi
         </span>
       )}
-      <div className="border-muted-foreground mb-4 border-b-2 border-solid pb-6">
+      <div className={`border-muted-foreground mb-4 border-b-2 border-solid pb-6 ${plan.isPopular ? "border-secondary" : "border-primary"}`}>
         <h3 className="mb-2 text-xl font-semibold">{plan.name}</h3>
         <div className="mb-6 text-4xl font-bold">
           {plan.price ? (
@@ -44,7 +44,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         )}
         <Link href="/beta">
           <button
-            className={`w-full rounded-lg py-2.5 font-medium transition-colors ${plan.isPopular ? "bg-light-text text-primary hover:bg-sidebar-ring" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+            className={`w-full rounded-lg py-2.5 font-medium transition-colors ${plan.isPopular ? "bg-secondary text-light-text hover:bg-[#EDA255]" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
           >
             Choisir {plan.name}
           </button>
