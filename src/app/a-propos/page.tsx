@@ -34,7 +34,7 @@ export default function About() {
           Foncior !
         </p>
 
-        <h2 className="text-primary my-5 px-8 text-4xl md:px-0">
+        <h2 className="text-primary text-center my-5 px-8 text-4xl md:px-0">
           L&apos;entreprise
         </h2>
 
@@ -94,7 +94,7 @@ export default function About() {
           </h2>
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
-            <h2 className="text-primary py-5 text-center text-xl font-bold">
+            <h2 className="text-primary pt-5 text-xl font-bold">
               Axel Marie - Chef de projet
             </h2>
 
@@ -122,7 +122,7 @@ export default function About() {
           </div>
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
-            <h2 className="text-primary py-5 text-center text-xl font-bold">
+            <h2 className="text-primary pt-5pt text-xl font-bold">
               Maxence Rebours - Responsable technique
             </h2>
 
@@ -150,7 +150,7 @@ export default function About() {
           </div>
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
-            <h2 className="text-primary py-5 text-center text-xl font-bold">
+            <h2 className="text-primary pt-5 text-xl font-bold">
               Clément Auger - Responsable SEO/SEA
             </h2>
 
