@@ -25,10 +25,10 @@ export default function LegalNoticePage() {
             </p>
             <ul className="list-none space-y-2 text-gray-600">
               <li><strong>Nom / Société :</strong> Axel Marie</li>
-              <li><strong>Statut juridique :</strong> En cour de création</li>
-              <li><strong>Capital social :</strong> En cour de création</li>
-              <li><strong>Siège social :</strong> En cour de création</li>
-              <li><strong>SIRET :</strong> En cour de création</li>
+              <li><strong>Statut juridique :</strong> En cours de création</li>
+              <li><strong>Capital social :</strong> En cours de création</li>
+              <li><strong>Siège social :</strong> En cours de création</li>
+              <li><strong>SIRET :</strong> En cours de création</li>
               <li><strong>RCS :</strong> Inscrit au Registre du Commerce et des Sociétés de Caen</li>
               <li><strong>Email :</strong> contact@foncior.fr</li>
               <li><strong>Directeur de la publication :</strong> Axel Marie</li>

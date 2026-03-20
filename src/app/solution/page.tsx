@@ -2,17 +2,23 @@ import { Header } from "../_components/Header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fonctionnalités de gestion immobilière : Finance & Calendrier | Foncior",
+  description: "Découvrez la solution Foncior : pilotez votre budget, gérez vos réservations et analysez la rentabilité de chaque bien en un clic.",
+};
 export default function Solution() {
   return (
     <div>
       <Header
-        title="Notre solution"
-        subtitle="Avec Foncior, reprenez le contrôle de votre patrimoine en toute simplicité."
+        title="Solution de gestion locative et suivi de patrimoine"
+        subtitle=""
         buttonText={null}
       />
       <div className="my-15 md:mx-20">
         <div>
-          <h1 className="text-primary mx-8 my-5 text-4xl md:mx-0">Finance</h1>
+          <h1 className="text-primary text-center mx-8 my-5 text-4xl md:mx-0">Finance</h1>
           <div className="md:justify-arround md:mt-10 md:flex md:items-center">
             <Image
               src="/ComputerFinanceTable.png"
@@ -32,7 +38,7 @@ export default function Solution() {
           </div>
         </div>
         <div className="md:mt-15">
-          <h1 className="text-primary mx-8 my-5 text-4xl md:mx-0">
+          <h1 className="text-primary text-center mx-8 my-5 text-4xl md:mx-0">
             Calendrier
           </h1>
           <div className="md:justify-arround md:mt-10 md:flex md:flex-row-reverse md:items-center">
@@ -55,7 +61,7 @@ export default function Solution() {
           </div>
         </div>
         <div className="md:mt-15">
-          <h1 className="text-primary mx-8 my-5 text-4xl md:mx-0">
+          <h1 className="text-primary text-center mx-8 my-5 text-4xl md:mx-0">
             Patrimoine
           </h1>
           <div className="md:justify-arround md:mt-10 md:flex md:items-center">
@@ -68,7 +74,7 @@ export default function Solution() {
             />
             <p className="mx-auto mt-8 w-70 md:mt-0 md:w-150">
               Analysez votre rentabilité, bien par bien. Avec la solution
-              Foncior, gardez une maîtrise totale de votre financeimmobilière.
+              Foncior, gardez une maîtrise totale de votre finance immobilière.
               Visualisez instantanément l&apos;impact de chaque location sur
               votre budget global. Comparez vos coûts d&apos;exploitation au
               rendement réel de vos investissements pour prendre les meilleures
@@ -77,13 +83,13 @@ export default function Solution() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center p-8 md:items-center md:gap-12">
-        <Link href="/pricing">
-          <Button variant="default" size="lg" className="mt-0 w-60 text-xl">
-            Découvrez nos tarifs
-          </Button>
-        </Link>
-      </div>
+          <div className="flex justify-center p-8 md:items-center md:gap-12 mb-12 mt-20 mx-auto shrink-0">
+            <Link href="/tarifs">
+              <Button variant="default" size="lg" className="mt-0 w-60 text-xl">
+                Découvrir nos tarifs
+              </Button>
+            </Link>
+          </div>
     </div>
   );
 }

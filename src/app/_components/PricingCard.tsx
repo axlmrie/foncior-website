@@ -13,15 +13,14 @@ export interface PricingPlan {
 export function PricingCard({ plan }: { plan: PricingPlan }) {
   return (
     <div
-      className={`relative flex h-[60vh] w-full max-w-sm flex-col rounded-2xl border p-6 shadow-sm ${plan.isPopular ? "border-secondary ring-secondary bg-primary text-light-text scale-105 shadow-md ring-1" : "border-gray-200 bg-white"}`}
+      className={`relative flex h-[60vh] md:h-[70vh] w-full max-w-sm flex-col rounded-2xl border p-6 shadow-sm ${plan.isPopular ? "border-secondary ring-secondary bg-primary text-light-text scale-105 shadow-md ring-1" : "border-gray-200 bg-white"}`}
     >
       {plan.isPopular && (
         <span className="bg-secondary absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-xs font-semibold text-white">
           Le plus choisi
         </span>
       )}
-      <div className="border-muted-foreground mb-4 border-b-2 border-solid pb-6">
-        <h3 className="mb-2 text-xl font-semibold">{plan.name}</h3>
+      <div className={`border-muted-foreground mb-4 border-b-2 border-solid pb-6 ${plan.isPopular ? "border-secondary" : "border-primary"}`}>        <h3 className="mb-2 text-xl font-semibold">{plan.name}</h3>
         <div className="mb-6 text-4xl font-bold">
           {plan.price ? (
             <>
@@ -44,7 +43,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         )}
         <Link href="/beta">
           <button
-            className={`w-full rounded-lg py-2.5 font-medium transition-colors ${plan.isPopular ? "bg-light-text text-primary hover:bg-sidebar-ring" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+            className={`w-full rounded-lg py-2.5 font-medium transition-colors ${plan.isPopular ? "bg-secondary text-light-text hover:bg-[#EDA255]" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
           >
             Choisir {plan.name}
           </button>
