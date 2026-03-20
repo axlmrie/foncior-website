@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Header } from "./_components/Header";
 import Image from "next/image";
 
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Foncior | Logiciel de gestion locative et suivi de patrimoine",
+  description: "Libérez-vous de la charge mentale immobilière avec Foncior. Centralisez vos finances, gérez vos locations et suivez la rentabilité de votre patrimoine.",
+};
 export default async function Home() {
   return (
     <HydrateClient>

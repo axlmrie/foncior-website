@@ -14,7 +14,7 @@ export function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: "A Propos", href: "/about" },
+    { name: "A Propos", href: "/a-propos" },
     { name: "Tarifs", href: "/tarifs" },
     { name: "Solution", href: "/solution" },
     { name: "Contact", href: "/contact" },

@@ -2,12 +2,18 @@ import { Header } from "../_components/Header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fonctionnalités de gestion immobilière : Finance & Calendrier | Foncior",
+  description: "Découvrez la solution Foncior : pilotez votre budget, gérez vos réservations et analysez la rentabilité de chaque bien en un clic.",
+};
 export default function Solution() {
   return (
     <div>
       <Header
-        title="Notre solution"
-        subtitle="Avec Foncior, reprenez le contrôle de votre patrimoine en toute simplicité."
+        title="Solution de gestion locative et suivi de patrimoine"
+        subtitle=""
         buttonText={null}
       />
       <div className="my-15 md:mx-20">

@@ -2,13 +2,18 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Header } from "../_components/Header";
+import { type Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Fonctionnalités de gestion immobilière : Finance & Calendrier | Foncior",
+  description: "Découvrez la solution Foncior : pilotez votre budget, gérez vos réservations (courte et longue durée) et analysez la rentabilité de chaque bien en un clic.",
+};
 export default function About() {
   return (
     <div>
       <Header
-        title="A Propos"
-        subtitle="Qui sommes-nous ? Découvrez notre entreprise, nos valeurs et nos talents."
+        title="À propos de Foncior : l'entreprise et l'équipe derrière votre gestion immobilière"
+        subtitle=""
         buttonText={null}
       />
       <div className="md:mx-20">
@@ -29,9 +34,9 @@ export default function About() {
           Foncior !
         </p>
 
-        <h1 className="text-primary my-5 px-8 text-4xl md:px-0">
+        <h2 className="text-primary text-center my-5 px-8 text-4xl md:px-0">
           L&apos;entreprise
-        </h1>
+        </h2>
 
         <div className="md:mx-auto md:flex md:max-w-5xl md:items-center md:justify-center md:gap-12">
           <Image
@@ -84,12 +89,12 @@ export default function About() {
         </div>
 
         <div>
-          <h1 className="text-center text-primary my-5 px-8 text-4xl md:mt-16 md:px-0">
+          <h2 className="text-center text-primary my-5 px-8 text-4xl md:mt-16 md:px-0">
             L&apos;équipe
-          </h1>
+          </h2>
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
-            <h2 className="text-primary py-5 text-center text-xl font-bold">
+            <h2 className="text-primary pt-5 text-xl font-bold">
               Axel Marie - Chef de projet
             </h2>
 
@@ -117,7 +122,7 @@ export default function About() {
           </div>
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
-            <h2 className="text-primary py-5 text-center text-xl font-bold">
+            <h2 className="text-primary pt-5pt text-xl font-bold">
               Maxence Rebours - Responsable technique
             </h2>
 
@@ -145,7 +150,7 @@ export default function About() {
           </div>
 
           <div className="mb-15 md:mx-auto md:max-w-3xl">
-            <h2 className="text-primary py-5 text-center text-xl font-bold">
+            <h2 className="text-primary pt-5 text-xl font-bold">
               Clément Auger - Responsable SEO/SEA
             </h2>
 
