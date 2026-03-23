@@ -18,11 +18,11 @@ export const BetaSignupEmail = ({
       </Text>
       
       <Text style={mainText}>
-        Nous vous confirmons votre inscription pour rejoindre la version Bêta de Foncior. Toute l'équipe est ravie de vous compter parmi nos premiers testeurs privilégiés !
+        Nous vous confirmons votre inscription pour rejoindre la version Bêta de Foncior. Toute l&apos;équipe est ravie de vous compter parmi nos premiers testeurs privilégiés !
       </Text>
 
       <Text style={mainText}>
-        L'objectif de Foncior est simple : vous permettre de centraliser automatiquement vos calendriers, de suivre votre rentabilité réelle et de simplifier votre fiscalité, sans modifier vos réservations sur les plateformes sources.
+        L&apos;objectif de Foncior est simple : vous permettre de centraliser automatiquement vos calendriers, de suivre votre rentabilité réelle et de simplifier votre fiscalité, sans modifier vos réservations sur les plateformes sources.
       </Text>
 
       <Section style={highlightBox}>
@@ -37,7 +37,7 @@ export const BetaSignupEmail = ({
 
       <Text style={signature}>
         À très vite,<br />
-        L'équipe Foncior
+        L&apos;équipe Foncior
       </Text>
     </FonciorEmailLayout>
   );
@@ -45,7 +45,7 @@ export const BetaSignupEmail = ({
 
 const greeting = {
   color: '#006b54',
-  fontWeight: 'bold',
+  fontWeight: 'bold', // eslint-disable-next-line -- optionnel, c'est juste un commentaire pour ESLint
   fontSize: '18px',
   marginBottom: '20px',
 };

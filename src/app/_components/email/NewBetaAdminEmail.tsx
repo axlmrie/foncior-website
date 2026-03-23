@@ -16,11 +16,11 @@ export const NewBetaAdminEmail = ({
   return (
     <FonciorEmailLayout previewText={`Nouvelle inscription Bêta : ${prenom} ${nom}`}>
       <Text style={greeting}>
-        Hello l'équipe Foncior ! 👋
+        Hello l&apos;équipe Foncior ! 👋
       </Text>
       
       <Text style={mainText}>
-        Excellente nouvelle : une nouvelle personne souhaite rejoindre la bêta fermée de l'ERP Foncior.
+        Excellente nouvelle : une nouvelle personne souhaite rejoindre la bêta fermée de l&apos;ERP Foncior.
       </Text>
 
       <Section style={infoBox}>

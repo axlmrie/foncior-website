@@ -26,12 +26,12 @@ export const ContactConfirmationEmail = ({
       <Section style={messageContainer}>
         <Text style={label}>Votre message :</Text>
         <Text style={clientMessage}>
-          "{messageClient}"
+          &quot;{messageClient}&quot;
         </Text>
       </Section>
 
       <Text style={signature}>
-        L'équipe Foncior
+        L&apos;équipe Foncior
       </Text>
     </FonciorEmailLayout>
   );
