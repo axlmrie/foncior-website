@@ -23,6 +23,7 @@
   "dependencies": {
     "@hugeicons/core-free-icons": "^4.0.0",
     "@hugeicons/react": "^1.1.6",
+    "@marsidev/react-turnstile": "^1.4.2",
     "@next/third-parties": "^16.1.6",
     "@prisma/client": "^6.6.0",
     "@react-email/components": "^1.0.10",

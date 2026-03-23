@@ -4,7 +4,7 @@ import Image from "next/image";
 import { sendBetaSignupAction } from "../actions/sendEmailAction";
 import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
-
+import { Turnstile } from '@marsidev/react-turnstile';
 export default function BetaClient() {
     const [state, formAction, isPending] = useActionState(sendBetaSignupAction, {});
 
@@ -37,11 +37,13 @@ export default function BetaClient() {
                 <div className="flex mb-6 items-start">
                     <input type="checkbox" name="consent" required className="mt-1 mr-3" id="consent" />
                     <label htmlFor="consent" className="text-white text-sm">
-                        J’accepte que les informations saisies soient utilisées dans le cadre de ma demande et de la relation commerciale qui peut en découler.
+                        J’accepte que les informations saisies soient utilisées dans le cadre de ma demande...
                     </label>
                 </div>
                 
-                <input type="email" name="to" defaultValue="beta@foncior.com" className="hidden" />
+                <div className="mb-6 flex justify-center">
+                    <Turnstile siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!} />
+                </div>
                 
                 <button
                     type="submit"

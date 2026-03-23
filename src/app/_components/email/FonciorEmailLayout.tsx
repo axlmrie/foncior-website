@@ -38,8 +38,10 @@ export const FonciorEmailLayout = ({ previewText, children }: FonciorEmailLayout
 
           <Section style={footer}>
             <Text style={footerText}>
-              <Link href="https://foncior.com/desabonnement" style={footerLink}>Se désabonner</Link>
-              {' • '}
+              {/* <Link href="https://foncior.com/desabonnement" style={footerLink}>Se désabonner</Link>
+              {' • '} 
+              A réactiver quand on aura une desinscriptyion 
+              */}
               <Link href="https://foncior.com/mentions-legales" style={footerLink}>Mentions légales</Link>
             </Text>
           </Section>

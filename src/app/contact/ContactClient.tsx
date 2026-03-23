@@ -4,13 +4,14 @@ import { toast } from "sonner";
 import { Header } from "../_components/Header";
 import { sendContactAction } from "../actions/sendEmailAction";
 import { useActionState, useEffect } from "react";
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function ContactClient() {
     const [state, formAction, isPending] = useActionState(sendContactAction, {});
     
     useEffect(() => {
         if (state?.success) {
-            toast.success(state.success, {
+            toast.success("Succès !", { 
                 description: state.message,
             });
         } else if (state?.error) {
@@ -70,7 +71,6 @@ export default function ContactClient() {
                             placeholder="Email" 
                             required
                         />
-                        <input type="email" name="to" defaultValue="contact@foncior.com" className="hidden"  />
                         
                         <textarea 
                             name="message"
@@ -79,6 +79,10 @@ export default function ContactClient() {
                             required
                         ></textarea>
                         
+                        <div className="mt-2 flex sm:justify-end">
+                            <Turnstile siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!} />
+                        </div>
+
                         <button 
                             type="submit"
                             disabled={isPending}

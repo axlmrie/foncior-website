@@ -13,10 +13,69 @@ export interface ActionState {
     error?: string;
 }
 
+async function verifyTurnstileToken(token: string | null) {
+    if (!token) return false;
+
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${token}`,
+    });
+
+    const data = await res.json();
+    return data.success;
+}
+
+export async function sendBetaSignupAction(
+    prevState: ActionState | null, 
+    formData: FormData
+): Promise<ActionState> {
+    
+    const turnstileToken = formData.get('cf-turnstile-response') as string | null;
+    const isHuman = await verifyTurnstileToken(turnstileToken);
+    
+    if (!isHuman) {
+        return { success: false, error: "Vérification de sécurité échouée. Êtes-vous un robot ?" };
+    }
+
+    const nom = (formData.get('nom') as string) ?? '';
+    const prenom = (formData.get('prenom') as string) ?? '';
+    const email = (formData.get('email') as string) ?? '';
+
+    try {
+        await Promise.all([
+            resend.emails.send({
+                from: 'Foncior Bêta <beta@foncior.com>', 
+                to: [email],
+                subject: `Bienvenue dans la bêta de Foncior !`,
+                react: BetaSignupEmail({ prenom, nom }), 
+            }),
+            resend.emails.send({
+                from: 'Foncior Système <beta@foncior.com>',
+                to: ['beta@foncior.com'],
+                subject: `🔥 Nouvelle inscription Bêta : ${prenom} ${nom}`,
+                react: NewBetaAdminEmail({ prenom, nom, email }), 
+            })
+        ]);
+        
+        return { success: true, message: "Inscription à la bêta confirmée !" };
+    } catch (error) {
+        console.error("Erreur Inscription Bêta:", error);
+        return { success: false, error: "Erreur lors de l'inscription." };
+    }
+}
+
 export async function sendContactAction(
     prevState: ActionState | null, 
     formData: FormData
 ): Promise<ActionState> {
+    const turnstileToken = formData.get('cf-turnstile-response') as string | null;
+    const isHuman = await verifyTurnstileToken(turnstileToken);
+    
+    if (!isHuman) {
+        return { success: false, error: "Vérification de sécurité échouée. Êtes-vous un robot ?" };
+    }
+
     const nom = (formData.get('nom') as string) ?? '';
     const prenom = (formData.get('prenom') as string) ?? '';
     const email = (formData.get('email') as string) ?? '';
@@ -33,39 +92,6 @@ export async function sendContactAction(
         
         return { success: true, message: "Message envoyé avec succès !" };
     } catch (error) {
-        console.error("Erreur Contact:", error);
         return { success: false, error: "Erreur lors de l'envoi." };
-    }
-}
-
-export async function sendBetaSignupAction(
-    prevState: ActionState | null, 
-    formData: FormData
-): Promise<ActionState> {
-    const nom = (formData.get('nom') as string) ?? '';
-    const prenom = (formData.get('prenom') as string) ?? '';
-    const email = (formData.get('email') as string) ?? '';
-
-    try {
-        await Promise.all([
-            resend.emails.send({
-                from: 'Foncior Bêta <beta@foncior.com>', 
-                to: [email],
-                subject: `Bienvenue dans la bêta de Foncior !`,
-                react: BetaSignupEmail({ prenom, nom }), 
-            }),
-
-            resend.emails.send({
-                from: 'Foncior Système <beta@foncior.com>', 
-                to: ['beta@foncior.com'],
-                subject: `🔥 Nouvelle inscription Bêta : ${prenom} ${nom}`,
-                react: NewBetaAdminEmail({ prenom, nom, email }), 
-            })
-        ]);
-        
-        return { success: true, message: "Inscription à la bêta confirmée !" };
-    } catch (error) {
-        console.error("Erreur Inscription Bêta:", error);
-        return { success: false, error: "Erreur lors de l'inscription." };
     }
 }
