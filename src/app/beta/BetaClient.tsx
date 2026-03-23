@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { sendEmailAction } from "../actions/sendEmailAction";
+import { sendBetaSignupAction } from "../actions/sendEmailAction";
 import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
 
 export default function BetaClient() {
-    const [state, formAction, isPending] = useActionState(sendEmailAction, {});
+    const [state, formAction, isPending] = useActionState(sendBetaSignupAction, {});
 
     useEffect(() => {
         if (state?.success) {

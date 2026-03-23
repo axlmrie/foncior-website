@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { api, HydrateClient } from "@/trpc/server";
+import { HydrateClient } from "@/trpc/server";
 import { Button } from "@/components/ui/button";
 import { Header } from "./_components/Header";
 import Image from "next/image";
