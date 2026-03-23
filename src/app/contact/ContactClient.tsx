@@ -2,11 +2,11 @@
 
 import { toast } from "sonner";
 import { Header } from "../_components/Header";
-import { sendEmailAction } from "../actions/sendEmailAction";
+import { sendContactAction } from "../actions/sendEmailAction";
 import { useActionState, useEffect } from "react";
 
 export default function ContactClient() {
-    const [state, formAction, isPending] = useActionState(sendEmailAction, {});
+    const [state, formAction, isPending] = useActionState(sendContactAction, {});
     
     useEffect(() => {
         if (state?.success) {
