@@ -13,7 +13,14 @@ export interface ActionState {
     error?: string;
 }
 
-async function verifyTurnstileToken(token: string | null) {
+interface TurnstileResponse {
+    success: boolean;
+    "error-codes"?: string[];
+    challenge_ts?: string;
+    hostname?: string;
+}
+
+async function verifyTurnstileToken(token: string | null): Promise<boolean> {
     if (!token) return false;
 
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -22,7 +29,8 @@ async function verifyTurnstileToken(token: string | null) {
         body: `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${token}`,
     });
 
-    const data = await res.json();
+    const data = (await res.json()) as TurnstileResponse;
+    
     return data.success;
 }
 
