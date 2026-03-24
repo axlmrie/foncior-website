@@ -9,7 +9,7 @@ import { Footer } from "./_components/Footer";
 import { CookieBanner } from "./_components/CookieBanner";
 import { Toaster } from "sonner";
 import Script from "next/script";
-
+//test
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
