@@ -93,12 +93,12 @@ export default function About() {
             L&apos;équipe
           </h2>
 
-          <div className="mb-15 md:mx-auto md:max-w-3xl">
+          <div className="mb-15 px-4 md:mx-auto md:max-w-3xl">
             <h2 className="text-primary pt-5 text-xl font-bold">
               Axel Marie - Chef de projet
             </h2>
 
-            <div className="px-4 pt-10 md:flex md:items-center md:justify-center md:gap-10">
+            <div className=" pt-10 md:flex md:items-center md:justify-center md:gap-10">
               <div className="float-left mr-4 ml-6 md:float-none md:m-0 md:shrink-0">
                 <Image
                   width={100}
@@ -121,12 +121,12 @@ export default function About() {
             </div>
           </div>
 
-          <div className="mb-15 md:mx-auto md:max-w-3xl">
+          <div className="mb-15 px-4 md:mx-auto md:max-w-3xl">
             <h2 className="text-primary pt-5pt text-xl font-bold">
               Maxence Rebours - Responsable technique
             </h2>
 
-            <div className="px-4 pt-10 md:flex md:flex-row-reverse md:items-center md:justify-center md:gap-10">
+            <div className=" pt-10 md:flex md:flex-row-reverse md:items-center md:justify-center md:gap-10">
               <div className="float-right mr-4 ml-6 md:float-none md:m-0 md:shrink-0">
                 <Image
                   width={100}
@@ -149,12 +149,12 @@ export default function About() {
             </div>
           </div>
 
-          <div className="mb-15 md:mx-auto md:max-w-3xl">
+          <div className="mb-15 px-4 md:mx-auto md:max-w-3xl">
             <h2 className="text-primary pt-5 text-xl font-bold">
               Clément Auger - Responsable SEO/SEA
             </h2>
 
-            <div className="px-4 pt-10 md:flex md:items-center md:justify-center md:gap-10">
+            <div className=" pt-10 md:flex md:items-center md:justify-center md:gap-10">
               <div className="float-left mr-4 ml-6 md:float-none md:m-0 md:shrink-0">
                 <Image
                   width={100}
