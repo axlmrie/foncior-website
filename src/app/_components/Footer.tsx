@@ -21,7 +21,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-6 text-[15px] font-semibold">
                     
                     <ul className="flex flex-col space-y-4">
-                        <li><Link href="/about" className="hover:text-secondary cursor-pointer transition-colors">A Propos</Link></li>
+                        <li><Link href="/a-propos" className="hover:text-secondary cursor-pointer transition-colors">A Propos</Link></li>
                         <li><Link href="/tarifs" className="hover:text-secondary cursor-pointer transition-colors">Tarifs</Link></li>
                     </ul>
 
