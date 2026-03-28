@@ -18,7 +18,7 @@ export default async function Home() {
           title=" Foncior, la solution globale qui révolutionne votre quotidien de propriétaire."
           subtitle={null}
           buttonText="Découvrez-nous"
-          buttonLink="/about"
+          buttonLink="/a-propos"
         />
 
         <p className="px-4x mx-auto my-10 text-center text-sm font-bold md:w-200 md:text-lg">
